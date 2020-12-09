@@ -41,7 +41,11 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day08.PartOne());
             Console.WriteLine("Part Two Answer: " + Day08.PartTwo());
             Console.WriteLine();
-            Console.Read();
+            Console.WriteLine("--- Day 9: Encoding Error ---");
+            Console.WriteLine("Part One Answer: " + Day09.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day09.PartTwo());
+            Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }
