@@ -45,6 +45,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day09.PartOne());
             Console.WriteLine("Part Two Answer: " + Day09.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 10: Adapter Array ---");
+            Console.WriteLine("Part One Answer: " + Day10.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day10.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
