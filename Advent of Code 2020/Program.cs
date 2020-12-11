@@ -49,6 +49,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day10.PartOne());
             Console.WriteLine("Part Two Answer: " + Day10.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 11: Seating System ---");
+            Console.WriteLine("Part One Answer: " + Day11.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day11.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
