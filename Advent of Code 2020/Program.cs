@@ -53,6 +53,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day11.PartOne());
             Console.WriteLine("Part Two Answer: " + Day11.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 12: Rain Risk ---");
+            Console.WriteLine("Part One Answer: " + Day12.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day12.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
