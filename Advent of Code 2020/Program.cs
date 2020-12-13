@@ -57,6 +57,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day12.PartOne());
             Console.WriteLine("Part Two Answer: " + Day12.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 13: Shuttle Search ---");
+            Console.WriteLine("Part One Answer: " + Day13.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day13.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }

@@ -40,73 +40,17 @@ namespace Advent_of_Code_2020.Answers
                         switch (facing)
                         {
                             case 'N':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'W';
-                                        break;
-                                    case 180:
-                                        facing = 'S';
-                                        break;
-                                    case 270:
-                                        facing = 'E';
-                                        break;
-                                }
-
+                                facing = "NWSE"[value / 90];
                                 break;
-                            }
                             case 'S':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'E';
-                                        break;
-                                    case 180:
-                                        facing = 'N';
-                                        break;
-                                    case 270:
-                                        facing = 'W';
-                                        break;
-                                }
-
+                                facing = "SENW"[value / 90];
                                 break;
-                            }
                             case 'E':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'N';
-                                        break;
-                                    case 180:
-                                        facing = 'W';
-                                        break;
-                                    case 270:
-                                        facing = 'S';
-                                        break;
-                                }
-
+                                facing = "ENWS"[value / 90];
                                 break;
-                            }
                             case 'W':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'S';
-                                        break;
-                                    case 180:
-                                        facing = 'E';
-                                        break;
-                                    case 270:
-                                        facing = 'N';
-                                        break;
-                                }
-
+                                facing = "WSEN"[value / 90];
                                 break;
-                            }
                         }
 
                         break;
@@ -116,73 +60,17 @@ namespace Advent_of_Code_2020.Answers
                         switch (facing)
                         {
                             case 'N':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'E';
-                                        break;
-                                    case 180:
-                                        facing = 'S';
-                                        break;
-                                    case 270:
-                                        facing = 'W';
-                                        break;
-                                }
-
+                                facing = "NESW"[value / 90];
                                 break;
-                            }
                             case 'S':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'W';
-                                        break;
-                                    case 180:
-                                        facing = 'N';
-                                        break;
-                                    case 270:
-                                        facing = 'E';
-                                        break;
-                                }
-
+                                facing = "SWNE"[value / 90];
                                 break;
-                            }
                             case 'E':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'S';
-                                        break;
-                                    case 180:
-                                        facing = 'W';
-                                        break;
-                                    case 270:
-                                        facing = 'N';
-                                        break;
-                                }
-
+                                facing = "ESWN"[value / 90];
                                 break;
-                            }
                             case 'W':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'N';
-                                        break;
-                                    case 180:
-                                        facing = 'E';
-                                        break;
-                                    case 270:
-                                        facing = 'S';
-                                        break;
-                                }
-
+                                facing = "WNES"[value / 90];
                                 break;
-                            }
                         }
 
                         break;
@@ -245,206 +133,81 @@ namespace Advent_of_Code_2020.Answers
                         break;
                     case 'L':
                     {
-                        var waypointVerticalTemp = waypointVertical;
-                        var waypointHorizontalTemp = waypointHorizontal;
-
                         switch (facing)
                         {
                             case 'N':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'W';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'S';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'E';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "NWSE"[value / 90];
                                 break;
-                            }
                             case 'S':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'E';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'N';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'W';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "SENW"[value / 90];
                                 break;
-                            }
                             case 'E':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'N';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'W';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'S';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "ENWS"[value / 90];
                                 break;
-                            }
                             case 'W':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'S';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'E';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'N';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "WSEN"[value / 90];
                                 break;
-                            }
+                        }
+
+                        var waypointVerticalOld = waypointVertical;
+                        var waypointHorizontalOld = waypointHorizontal;
+
+                        switch (value)
+                        {
+                            case 90:
+                                waypointVertical = waypointHorizontalOld;
+                                waypointHorizontal = -waypointVerticalOld;
+                                break;
+                            case 180:
+                                waypointVertical = -waypointVerticalOld;
+                                waypointHorizontal = -waypointHorizontalOld;
+                                break;
+                            case 270:
+                                waypointVertical = -waypointHorizontalOld;
+                                waypointHorizontal = waypointVerticalOld;
+                                break;
                         }
 
                         break;
                     }
                     case 'R':
                     {
-                        var waypointVerticalTemp = waypointVertical;
-                        var waypointHorizontalTemp = waypointHorizontal;
-
                         switch (facing)
                         {
                             case 'N':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'E';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'S';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'W';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "NESW"[value / 90];
                                 break;
-                            }
                             case 'S':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'W';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'N';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'E';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "SWNE"[value / 90];
                                 break;
-                            }
                             case 'E':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'S';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'W';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'N';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "ESWN"[value / 90];
                                 break;
-                            }
                             case 'W':
-                            {
-                                switch (value)
-                                {
-                                    case 90:
-                                        facing = 'N';
-                                        waypointVertical = -waypointHorizontalTemp;
-                                        waypointHorizontal = waypointVerticalTemp;
-                                        break;
-                                    case 180:
-                                        facing = 'E';
-                                        waypointVertical = -waypointVerticalTemp;
-                                        waypointHorizontal = -waypointHorizontalTemp;
-                                        break;
-                                    case 270:
-                                        facing = 'S';
-                                        waypointVertical = waypointHorizontalTemp;
-                                        waypointHorizontal = -waypointVerticalTemp;
-                                        break;
-                                }
-
+                                facing = "WNES"[value / 90];
                                 break;
-                            }
+                        }
+
+                        var waypointVerticalOld = waypointVertical;
+                        var waypointHorizontalOld = waypointHorizontal;
+
+                        switch (value)
+                        {
+                            case 90:
+                                facing = 'N';
+                                waypointVertical = -waypointHorizontalOld;
+                                waypointHorizontal = waypointVerticalOld;
+                                break;
+                            case 180:
+                                facing = 'E';
+                                waypointVertical = -waypointVerticalOld;
+                                waypointHorizontal = -waypointHorizontalOld;
+                                break;
+                            case 270:
+                                facing = 'S';
+                                waypointVertical = waypointHorizontalOld;
+                                waypointHorizontal = -waypointVerticalOld;
+                                break;
                         }
 
                         break;
