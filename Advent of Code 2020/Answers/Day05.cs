@@ -45,9 +45,9 @@ namespace Advent_of_Code_2020.Answers
             lines = lines.Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();
 
             var all = new List<int>(128 * 8);
-            for (int i = 0; i < 128; i++)
+            for (var i = 0; i < 128; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (var j = 0; j < 8; j++)
                     all.Add((i * 8) + j);
             }
 

@@ -65,6 +65,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day14.PartOne());
             Console.WriteLine("Part Two Answer: " + Day14.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 15: Rambunctious Recitation ---");
+            Console.WriteLine("Part One Answer: " + Day15.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day15.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }

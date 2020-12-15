@@ -82,7 +82,7 @@ namespace Advent_of_Code_2020.Answers
                 acc = Exec(code, copy, 0, out error);
 
                 copy = lines.ToArray();
-                for (int i = last; i < copy.Length; i++)
+                for (var i = last; i < copy.Length; i++)
                 {
                     if (copy[i].StartsWith("jmp"))
                     {
