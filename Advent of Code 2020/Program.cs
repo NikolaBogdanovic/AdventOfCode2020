@@ -61,6 +61,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day13.PartOne());
             Console.WriteLine("Part Two Answer: " + Day13.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 14: Docking Data ---");
+            Console.WriteLine("Part One Answer: " + Day14.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day14.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }

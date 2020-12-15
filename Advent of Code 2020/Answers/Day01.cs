@@ -19,9 +19,7 @@ namespace Advent_of_Code_2020.Answers
                     var jj = int.Parse(j);
 
                     if (ii + jj == 2020)
-                    {
                         return ii * jj;
-                    }
                 }
             }
 
@@ -44,9 +42,7 @@ namespace Advent_of_Code_2020.Answers
                         var kk = int.Parse(k);
 
                         if (ii + jj + kk == 2020)
-                        {
                             return ii * jj * kk;
-                        }
                     }
                 }
             }

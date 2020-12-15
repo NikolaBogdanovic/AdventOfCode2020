@@ -60,9 +60,7 @@ namespace Advent_of_Code_2020.Answers
                 }
             }
             else
-            {
                 error = true;
-            }
 
             return acc;
         }

@@ -42,9 +42,7 @@ namespace Advent_of_Code_2020.Answers
                 foreach (var j in preamble)
                 {
                     if (i != j && i + j == num)
-                    {
                         return true;
-                    }
                 }
             }
 
@@ -98,9 +96,7 @@ namespace Advent_of_Code_2020.Answers
                 }
 
                 if (num == error)
-                {
                     break;
-                }
             }
 
             if (range != null)

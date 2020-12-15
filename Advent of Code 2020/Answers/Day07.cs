@@ -52,9 +52,7 @@ namespace Advent_of_Code_2020.Answers
 
                 var subs = new Dictionary<string, int>();
                 for (int i = 7; i < data.Length; i += 4)
-                {
                     subs.Add(data[i - 2] + " " + data[i - 1] + " bag", int.Parse(data[i - 3]));
-                }
 
                 bags.Add(color, subs);
             }

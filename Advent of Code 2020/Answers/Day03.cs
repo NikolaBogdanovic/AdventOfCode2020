@@ -39,9 +39,7 @@ namespace Advent_of_Code_2020.Answers
 
                 var full = map;
                 for (var j = 0; j < (i / rows); j++)
-                {
                     full += map;
-                }
 
                 if (full[index] == '#')
                     ++num;

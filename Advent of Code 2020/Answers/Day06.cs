@@ -26,9 +26,7 @@ namespace Advent_of_Code_2020.Answers
                 foreach (var letter in data)
                 {
                     if (!answers.Contains(letter))
-                    {
                         answers.Add(letter);
-                    }
                 }
             }
 
@@ -50,9 +48,7 @@ namespace Advent_of_Code_2020.Answers
                 if (string.IsNullOrWhiteSpace(data))
                 {
                     if (!first)
-                    {
                         groups.Add(groups.Count, answers.Count);
-                    }
 
                     first = true;
                     continue;
@@ -68,9 +64,7 @@ namespace Advent_of_Code_2020.Answers
                 {
                     var letter = answers[i];
                     if (!data.Contains(letter))
-                    {
                         answers.RemoveAt(i);
-                    }
                 }
             }
 
