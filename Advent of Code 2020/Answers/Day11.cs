@@ -116,7 +116,7 @@ namespace Advent_of_Code_2020.Answers
             return num;
         }
 
-        public static long PartTwo()
+        public static int PartTwo()
         {
             var lines = File.ReadAllLines("Inputs\\Puzzle11.txt", Encoding.UTF8);
             lines = lines.Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();

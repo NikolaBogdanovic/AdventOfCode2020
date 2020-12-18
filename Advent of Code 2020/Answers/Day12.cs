@@ -101,7 +101,7 @@ namespace Advent_of_Code_2020.Answers
             return Math.Abs(vertical) + Math.Abs(horizontal);
         }
 
-        public static long PartTwo()
+        public static int PartTwo()
         {
             var lines = File.ReadAllLines("Inputs\\Puzzle12.txt", Encoding.UTF8);
             lines = lines.Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();

@@ -8,7 +8,7 @@ namespace Advent_of_Code_2020.Answers
 {
     public static class Day15
     {
-        public static long PartOne()
+        public static int PartOne()
         {
             var data = File.ReadAllText("Inputs\\Puzzle15.txt", Encoding.UTF8);
 
@@ -36,7 +36,7 @@ namespace Advent_of_Code_2020.Answers
             return memory.First(x => x.Value == 2020).Key;
         }
 
-        public static long PartTwo()
+        public static int PartTwo()
         {
             var data = File.ReadAllText("Inputs\\Puzzle15.txt", Encoding.UTF8);
 

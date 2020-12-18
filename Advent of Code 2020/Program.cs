@@ -69,6 +69,18 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day15.PartOne());
             Console.WriteLine("Part Two Answer: " + Day15.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 16: Ticket Translation ---");
+            Console.WriteLine("Part One Answer: " + Day16.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day16.PartTwo());
+            Console.WriteLine();
+            Console.WriteLine("--- Day 17: Conway Cubes ---");
+            Console.WriteLine("Part One Answer: " + Day17.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day17.PartTwo());
+            Console.WriteLine();
+            Console.WriteLine("--- Day 18: Operation Order ---");
+            Console.WriteLine("Part One Answer: " + Day18.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day18.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
