@@ -37,8 +37,8 @@ namespace Advent_of_Code_2020.Answers
             {
                 foreach (var len in cubes)
                 {
-                    len.Value.Add(len.Value.Keys.Min() - 1, len.Value[0].ToDictionary(x => x.Key, x => false));
-                    len.Value.Add(len.Value.Keys.Max() + 1, len.Value[0].ToDictionary(x => x.Key, x => false));
+                    len.Value.Add(len.Value.Keys.Min() - 1, len.Value[0].ToDictionary(y => y.Key, y => false));
+                    len.Value.Add(len.Value.Keys.Max() + 1, len.Value[0].ToDictionary(y => y.Key, y => false));
 
                     foreach (var row in len.Value)
                     {
@@ -145,20 +145,23 @@ namespace Advent_of_Code_2020.Answers
 
             for (var i = 0; i < 6; i++)
             {
-                foreach (var len in cubes[0])
+                foreach (var hyp in cubes)
                 {
-                    len.Value.Add(len.Value.Keys.Min() - 1, len.Value[0].ToDictionary(x => x.Key, x => false));
-                    len.Value.Add(len.Value.Keys.Max() + 1, len.Value[0].ToDictionary(x => x.Key, x => false));
+                    hyp.Value.Add(hyp.Value.Keys.Min() - 1, hyp.Value[0].ToDictionary(x => x.Key, x => x.Value.ToDictionary(y => y.Key, y => false)));
+                    hyp.Value.Add(hyp.Value.Keys.Max() + 1, hyp.Value[0].ToDictionary(x => x.Key, x => x.Value.ToDictionary(y => y.Key, y => false)));
 
-                    foreach (var row in len.Value)
+                    foreach (var len in hyp.Value)
                     {
-                        row.Value.Add(row.Value.Keys.Min() - 1, false);
-                        row.Value.Add(row.Value.Keys.Max() + 1, false);
+                        len.Value.Add(len.Value.Keys.Min() - 1, len.Value[0].ToDictionary(y => y.Key, y => false));
+                        len.Value.Add(len.Value.Keys.Max() + 1, len.Value[0].ToDictionary(y => y.Key, y => false));
+
+                        foreach (var row in len.Value)
+                        {
+                            row.Value.Add(row.Value.Keys.Min() - 1, false);
+                            row.Value.Add(row.Value.Keys.Max() + 1, false);
+                        }
                     }
                 }
-
-                cubes[0].Add(-1 - i, cubes[0][0].ToDictionary(x => x.Key, x => x.Value.ToDictionary(y => y.Key, y => false)));
-                cubes[0].Add(1 + i, cubes[0][0].ToDictionary(x => x.Key, x => x.Value.ToDictionary(y => y.Key, y => false)));
 
                 cubes.Add(-1 - i, cubes[0].ToDictionary(z => z.Key, z => z.Value.ToDictionary(x => x.Key, x => x.Value.ToDictionary(y => y.Key, y => false))));
                 cubes.Add(1 + i, cubes[0].ToDictionary(z => z.Key, z => z.Value.ToDictionary(x => x.Key, x => x.Value.ToDictionary(y => y.Key, y => false))));
