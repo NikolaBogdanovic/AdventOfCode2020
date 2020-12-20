@@ -77,7 +77,6 @@ namespace Advent_of_Code_2020.Answers
             var valid = new HashSet<int>();
 
             var fields = new Dictionary<string, HashSet<int>>();
-            var order = new Dictionary<string, int>();
 
             bool your = false;
             bool nearby = false;
@@ -159,72 +158,58 @@ namespace Advent_of_Code_2020.Answers
                 }
             }
 
+            tickets.Add(my.ToArray());
+
             var columns = new Dictionary<string, HashSet<int>>();
 
-            var index = 0;
-            foreach (var nums in tickets.ToArray())
+            for (var i = 0; i < my.Count; i++)
             {
-                for (var j = 0; j < nums.Length; j++)
+                var values = tickets.Select(x => x[i]).Distinct().ToArray();
+
+                foreach (var kvp in fields)
                 {
-                    order.Clear();
-
-                    var values = new List<int>(nums.Length);
-                    values.AddRange(nums.Skip(nums.Length - j));
-                    values.AddRange(nums.Take(nums.Length - j));
-
-                    foreach (var kvp in fields.Where(x => !order.ContainsKey(x.Key)))
+                    bool invalid = false;
+                    foreach (var num in values)
                     {
-                        for (var i = values.Count - 1; i > -1; i--)
+                        if (!kvp.Value.Contains(num))
                         {
-                            if (kvp.Value.Contains(values[i]))
-                            {
-                                order.Add(kvp.Key, i);
-                                values.RemoveAt(i);
-
-                                break;
-                            }
+                            invalid = true;
+                            break;
                         }
                     }
 
-                    if (values.Count > 0)
-                    {
-                        tickets.RemoveAt(index);
-                        break;
-                    }
-                }
+                    if (invalid)
+                        continue;
 
-                if (order.Count == nums.Length)
-                {
-                    foreach (var kvp in order)
-                    {
-                        if (!columns.ContainsKey(kvp.Key))
-                            columns.Add(kvp.Key, new HashSet<int>(nums.Length));
+                    if (!columns.ContainsKey(kvp.Key))
+                        columns.Add(kvp.Key, new HashSet<int>());
 
-                        if (!columns[kvp.Key].Contains(kvp.Value))
-                            columns[kvp.Key].Add(kvp.Value);
-                    }
-
-                    ++index;
+                    columns[kvp.Key].Add(i);
                 }
             }
 
-            order.Clear();
-            foreach (var kvp in columns)
+            var order = new Dictionary<string, int>();
+            while (order.Count != fields.Count)
             {
-                if (kvp.Value.Count == 1)
+                foreach (var kvp in columns.ToArray())
                 {
-                    order.Add(kvp.Key, kvp.Value.First());
-                    continue;
-                }
-
-                foreach (var i in kvp.Value)
-                {
-                    var values = columns.Where(x => x.Key != kvp.Key && !order.ContainsKey(x.Key)).Select(x => x.Value).ToArray();
-
-                    if (values.All(x => !x.Contains(i)))
+                    if (kvp.Value.Count == 1)
                     {
-                        order.Add(kvp.Key, i);
-                        break;
+                        order.Add(kvp.Key, kvp.Value.First());
+                        columns.Remove(kvp.Key);
+                        continue;
+                    }
+
+                    foreach (var i in kvp.Value)
+                    {
+                        var values = columns.Where(x => x.Key != kvp.Key).Select(x => x.Value).ToArray();
+
+                        if (values.All(x => !x.Contains(i)))
+                        {
+                            order.Add(kvp.Key, i);
+                            columns.Remove(kvp.Key);
+                            break;
+                        }
                     }
                 }
             }
