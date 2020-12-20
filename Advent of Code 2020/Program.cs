@@ -81,6 +81,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day18.PartOne());
             Console.WriteLine("Part Two Answer: " + Day18.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 19: Monster Messages ---");
+            Console.WriteLine("Part One Answer: " + Day19.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day19.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
