@@ -7,13 +7,13 @@ namespace Advent_of_Code_2020.Answers
 {
     public static class Day19
     {
-        public static long PartOne()
+        public static int PartOne()
         {
             var lines = File.ReadAllLines("Inputs\\Puzzle19.txt", Encoding.UTF8);
 
-            var rules = new Dictionary<string, List<string>>(lines.Length);
+            var rules = new Dictionary<string, List<string>>(lines.Length / 2);
 
-            var messages = new List<string>(lines.Length);
+            var messages = new List<string>(lines.Length / 2);
 
             foreach (var data in lines)
             {
@@ -117,25 +117,25 @@ namespace Advent_of_Code_2020.Answers
                 }
             }
 
-            var zero = rules["0"].ToHashSet();
+            var rule0 = rules["0"].ToHashSet();
 
             var num = 0;
             foreach (var item in messages)
             {
-                if (zero.Contains(item))
+                if (rule0.Contains(item))
                     ++num;
             }
 
             return num;
         }
 
-        public static long PartTwo()
+        public static int PartTwo()
         {
             var lines = File.ReadAllLines("Inputs\\Puzzle19.txt", Encoding.UTF8);
 
-            var rules = new Dictionary<string, List<string>>(lines.Length);
+            var rules = new Dictionary<string, List<string>>(lines.Length / 2);
 
-            var messages = new List<string>(lines.Length);
+            var messages = new List<string>(lines.Length / 2);
 
             foreach (var data in lines)
             {
@@ -244,11 +244,11 @@ namespace Advent_of_Code_2020.Answers
             // 11: 42 31 | 42 11 31
             //
             // 8-1 11-1: 42 42 31
-            // 8-1 11-2: 42 42...31
-            // 8-2 11-1: 42...42 31
-            // 8-2 11-2: 42...42...31
+            // 8-1 11-2: 42 42...42 31...31
+            // 8-2 11-1: 42...42...42 31
+            // 8-2 11-2: 42...42...42...42 31...31
 
-            var zero = rules["0"].ToHashSet();
+            var rule0 = rules["0"].ToHashSet();
 
             var rule42 = rules["42"].ToList();
             var rule31 = rules["31"].ToList();
@@ -256,13 +256,13 @@ namespace Advent_of_Code_2020.Answers
             var num = 0;
             foreach (var item in messages)
             {
-                if (zero.Contains(item))
+                if (rule0.Contains(item))
                 {
                     ++num;
                     continue;
                 }
 
-                var index42 = 0;
+                var num42 = 0;
 
                 var i = 0;
                 var j = 0;
@@ -273,7 +273,7 @@ namespace Advent_of_Code_2020.Answers
                         j = item.IndexOf(data, i);
                         if (j == i)
                         {
-                            ++index42;
+                            ++num42;
                             i += data.Length;
                             j = i;
                             break;
@@ -282,10 +282,10 @@ namespace Advent_of_Code_2020.Answers
                 }
                 while (j == i && i < item.Length);
 
-                if (index42 == 0 || i == item.Length)
+                if (num42 == 0 || i == item.Length)
                     continue;
 
-                var index31 = 0;
+                var num31 = 0;
 
                 do
                 {
@@ -294,7 +294,7 @@ namespace Advent_of_Code_2020.Answers
                         j = item.IndexOf(data, i);
                         if (j == i)
                         {
-                            ++index31;
+                            ++num31;
                             i += data.Length;
                             j = i;
                             break;
@@ -303,7 +303,7 @@ namespace Advent_of_Code_2020.Answers
                 }
                 while (j == i && i < item.Length);
 
-                if (index31 > 0 && index31 < index42 && i == item.Length)
+                if (num31 > 0 && num31 < num42 && i == item.Length)
                     ++num;
             }
 
