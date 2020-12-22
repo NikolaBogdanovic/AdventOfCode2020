@@ -93,6 +93,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day21.PartOne());
             Console.WriteLine("Part Two Answer: " + Day21.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 22: Crab Combat ---");
+            Console.WriteLine("Part One Answer: " + Day22.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day22.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
