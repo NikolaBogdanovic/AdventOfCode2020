@@ -98,6 +98,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day22.PartOne());
             Console.WriteLine("Part Two Answer: " + Day22.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 23: Crab Cups ---");
+            Console.WriteLine("Part One Answer: " + Day23.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day23.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
