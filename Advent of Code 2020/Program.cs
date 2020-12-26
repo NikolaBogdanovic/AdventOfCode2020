@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Advent_of_Code_2020.Answers;
 
 namespace Advent_of_Code_2020
@@ -85,10 +86,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day19.PartOne());
             Console.WriteLine("Part Two Answer: " + Day19.PartTwo());
             Console.WriteLine();
-            ////Console.WriteLine("--- Day 20: Jurassic Jigsaw ---");
-            ////Console.WriteLine("Part One Answer: " + Day20.PartOne());
-            ////Console.WriteLine("Part Two Answer: " + Day20.PartTwo());
-            ////Console.WriteLine();
+            Console.WriteLine("--- Day 20: Jurassic Jigsaw ---");
+            Console.WriteLine("Part One Answer: " + Day20.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day20.PartTwo());
+            Console.WriteLine();
             Console.WriteLine("--- Day 21: Allergen Assessment ---");
             Console.WriteLine("Part One Answer: " + Day21.PartOne());
             Console.WriteLine("Part Two Answer: " + Day21.PartTwo());
