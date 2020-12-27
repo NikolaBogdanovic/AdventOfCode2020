@@ -106,6 +106,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day24.PartOne());
             Console.WriteLine("Part Two Answer: " + Day24.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 25: Combo Breaker ---");
+            Console.WriteLine("Part One Answer: " + Day25.PartOne());
+            Console.WriteLine("Part Two Answer: fifty stars");
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
