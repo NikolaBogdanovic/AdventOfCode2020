@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Advent_of_Code_2020.Answers
+namespace AdventOfCode2020.Answers
 {
     public static class Day20
     {

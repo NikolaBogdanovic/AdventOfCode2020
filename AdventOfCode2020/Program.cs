@@ -1,8 +1,8 @@
 ﻿using System;
 
-using Advent_of_Code_2020.Answers;
+using AdventOfCode2020.Answers;
 
-namespace Advent_of_Code_2020
+namespace AdventOfCode2020
 {
     public class Program
     {

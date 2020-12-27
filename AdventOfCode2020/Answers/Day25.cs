@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace Advent_of_Code_2020.Answers
+namespace AdventOfCode2020.Answers
 {
     public static class Day25
     {
