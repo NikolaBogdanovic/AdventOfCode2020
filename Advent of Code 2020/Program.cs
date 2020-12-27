@@ -102,6 +102,10 @@ namespace Advent_of_Code_2020
             Console.WriteLine("Part One Answer: " + Day23.PartOne());
             Console.WriteLine("Part Two Answer: " + Day23.PartTwo());
             Console.WriteLine();
+            Console.WriteLine("--- Day 24: Lobby Layout ---");
+            Console.WriteLine("Part One Answer: " + Day24.PartOne());
+            Console.WriteLine("Part Two Answer: " + Day24.PartTwo());
+            Console.WriteLine();
             Console.ReadKey();
         }
     }
